@@ -1,7 +1,7 @@
-const ItemListContainer = () => {
+const ItemListContainer = ( {greeting} ) => {
     return (
         <section className="itemList">
-            <p>There are no available products to display at the moment</p>
+            <p> {greeting} </p>
         </section>
     )
 }
