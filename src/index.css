@@ -59,6 +59,8 @@ h1 {
 
 .itemList {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
