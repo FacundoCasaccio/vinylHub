@@ -8,26 +8,19 @@ const ItemCount = ( {stock, initial, onAdd, productName} ) => {
     const [availableStock, setAvailableStock] = useState(stock);
     
     const addItem = () => {
-        if(availableStock > 1) {
-            setItemCounter(itemCounter + 1);
-            setAvailableStock(availableStock - 1);
-        } else {
-            onAdd("Out of stock");
-        }
+        itemCounter < availableStock ? setItemCounter(itemCounter + 1) : onAdd("Not enough stock");
     }
 
     const removeItem = () => {
-        if(itemCounter > 1) {
-            setItemCounter(itemCounter - 1);
-            setAvailableStock(availableStock + 1);
-        } else {
-            onAdd("Action cannot be performed")
-        }
+        itemCounter > 1 ? setItemCounter(itemCounter - 1) : onAdd("Action cannot be performed");
     }
 
     const addToCart = () => {
-        onAdd(`${itemCounter} items added to cart`);
-        setItemCounter(1);
+        if (availableStock > 0) {
+            onAdd(`${itemCounter} items added to cart`);
+            setAvailableStock(availableStock - itemCounter);
+            setItemCounter(1);
+        } else onAdd("Items cannot be added to cart... out of stock");
     }
 
     return (
