@@ -1,0 +1,32 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    color: #212121;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.productCard img {
+    height: 250px;
+}
+
+.albumTitle {
+    font-size: 1.3rem;
+    margin: .8rem 0;
+}
+
+.detailsButton {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    color: #212121;
+    padding: .5rem;
+    margin: 1.5rem;
+    width: 75%;
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 12px;
+}
