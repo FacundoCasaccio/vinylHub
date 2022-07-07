@@ -25,12 +25,18 @@ ul {
 ul > li {
   margin: 1rem 2rem;
   border-bottom: 1px solid transparent;
+  color: #212121;
 }
 
 ul > li:hover {
   transform: scale(1.05);
   transition: .4s;
   cursor: pointer;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo {

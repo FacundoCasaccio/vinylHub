@@ -9,9 +9,6 @@ const ItemDetail = ({item}) => {
         console.log(message);
     }
 
-
-
-    
     return (
         <div className="itemDetail">
             <div>
@@ -21,7 +18,7 @@ const ItemDetail = ({item}) => {
                 <h2>{name}</h2>
                 <span>{artist} - {year}</span>
                 <span>${price}</span>
-                <ItemCount stock={stock} initial={1} onAdd={notify} productName={name} />
+                <ItemCount stock={25} initial={1} onAdd={notify} productName={name} />
             </div>
         </div>
     );
