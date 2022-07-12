@@ -1,0 +1,19 @@
+button {
+    display: flex;
+    background-color: inherit;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: .95rem;
+    padding: 1rem;
+    letter-spacing: .05rem;
+    color: #212121;
+}
+
+button:hover {
+    border-bottom: 1px solid #212121 ;
+    transition: .5s;
+}
+
+a {
+    text-decoration: none;
+}

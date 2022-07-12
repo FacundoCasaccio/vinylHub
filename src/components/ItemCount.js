@@ -7,12 +7,14 @@ const ItemCount = ( {stock, initial, onAdd, productName} ) => {
     const [itemCounter, setItemCounter] = useState(initial);
     const [availableStock, setAvailableStock] = useState(stock);
     
-    const addItem = () => {
+    const addItem = (e) => {
         itemCounter < availableStock ? setItemCounter(itemCounter + 1) : onAdd("Not enough stock");
+        e.stopPropagation();
     }
 
-    const removeItem = () => {
+    const removeItem = (e) => {
         itemCounter > 1 ? setItemCounter(itemCounter - 1) : onAdd("Action cannot be performed");
+        e.stopPropagation();
     }
 
     const addToCart = () => {
