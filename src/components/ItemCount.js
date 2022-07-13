@@ -19,10 +19,10 @@ const ItemCount = ( {stock, initial, onAdd, productName} ) => {
 
     const addToCart = () => {
         if (availableStock > 0) {
-            onAdd(`${itemCounter} items added to cart`);
+            onAdd(itemCounter);
             setAvailableStock(availableStock - itemCounter);
             setItemCounter(1);
-        } else onAdd("Items cannot be added to cart... out of stock");
+        } else console.log("Items cannot be added to cart... out of stock");
     }
 
     return (

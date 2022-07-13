@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getItem } from "../mocks/albumsApi";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../components/ItemDetail";
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = ( ) => {
