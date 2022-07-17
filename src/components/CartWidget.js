@@ -9,7 +9,7 @@ const CartWidget = ( {products} ) => {
     return (
         <>
             <ShoppingBagIcon className='icon'/>
-            <span> {productsQuantity} </span>
+            {products.length != 0 && <span> {productsQuantity} </span>}
         </>
 
     )

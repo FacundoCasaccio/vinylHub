@@ -1,8 +1,13 @@
 import logo from "../assets/vinylIcon.jpg"
 import CartWidget from "./CartWidget";
 import { Link } from 'react-router-dom';
+import { useContext } from "react";
+import { cartContext } from "../context/CartContext";
 
 const NavBar = () => {
+
+    const { products } = useContext(cartContext);
+
     return (
         <nav>
             <div className="logo">
@@ -15,7 +20,7 @@ const NavBar = () => {
                 <li><Link to="/category/albums">Albums</Link></li>
                 <li><Link to="/category/shirts">T-Shirts</Link></li>
                 <li>About</li>
-                <CartWidget products={null}/>
+                <Link to="/cart"><CartWidget products={products}/></Link>
             </ul>
         </nav>
     )
