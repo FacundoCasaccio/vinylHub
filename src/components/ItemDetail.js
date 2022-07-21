@@ -11,7 +11,6 @@ const ItemDetail = ({item}) => {
     const { addProduct } = useContext(cartContext);
 
     const onItemsAdded = (count) => {
-        console.log(count);
         addProduct({...item, quantity: count});
         setAddedItems(true);
     }

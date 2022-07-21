@@ -12,8 +12,8 @@ function App() {
       <NavBar />
         <main>
           <Routes>
-              <Route path="/" element={<ItemListContainer greeting="There are no available products to display at the moment" />} />
-              <Route path="/category/:categoryId" element={<ItemListContainer greeting="There are no available products to display at the moment" />} />
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/category/:categoryId" element={<ItemListContainer />} />
               <Route path="/detail/:id" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<Cart />} />
           </Routes>
