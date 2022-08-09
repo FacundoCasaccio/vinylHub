@@ -1,20 +1,21 @@
 import { useState } from "react";
 import "./styles/ItemCount.css";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemCount = ( {stock, initial, onAdd, productName} ) => {
  
     const [itemCounter, setItemCounter] = useState(initial);
     const [availableStock, setAvailableStock] = useState(stock);
+    const notify = (message) => toast.error(message);
     
     const addItem = (e) => {
-        itemCounter < availableStock ? setItemCounter(itemCounter + 1) : onAdd("Not enough stock");
-        e.stopPropagation();
+        itemCounter < availableStock ? setItemCounter(itemCounter + 1) : notify("Not enough stock");
     }
 
     const removeItem = (e) => {
-        itemCounter > 1 ? setItemCounter(itemCounter - 1) : onAdd("Action cannot be performed");
-        e.stopPropagation();
+        itemCounter > 1 ? setItemCounter(itemCounter - 1) : notify("Action cannot be performed");
     }
 
     const addToCart = () => {
@@ -22,7 +23,7 @@ const ItemCount = ( {stock, initial, onAdd, productName} ) => {
             onAdd(itemCounter);
             setAvailableStock(availableStock - itemCounter);
             setItemCounter(1);
-        } else console.log("Items cannot be added to cart... out of stock");
+        } else notify("Items cannot be added to cart... out of stock");
     }
 
     return (

@@ -19,7 +19,6 @@ const NavBar = () => {
             <ul>
                 <li><Link to="/category/albums">Albums</Link></li>
                 <li><Link to="/category/shirts">T-Shirts</Link></li>
-                <li>About</li>
                 <Link to="/cart"><CartWidget products={products}/></Link>
             </ul>
         </nav>

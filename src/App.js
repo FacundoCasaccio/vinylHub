@@ -4,6 +4,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer';
 import Cart from './components/Cart';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import CartCustomProvider from './context/CartContext';
+import { ToastContainer} from 'react-toastify';
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
           </Routes>
         </main>
       </CartCustomProvider>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

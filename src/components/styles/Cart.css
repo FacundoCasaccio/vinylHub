@@ -41,3 +41,28 @@
 .cartProductCard img {
     height: 200px;
 }
+
+.cartForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #212121;
+    width: 20vw;
+    padding: 2vw 10vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cartForm h3 {
+    font-size: 1.3rem;
+}
+
+.cartForm input {
+    color: #212121;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #212121;
+    padding: .2rem .5rem;
+    margin: 1rem 0rem 2rem;
+}
